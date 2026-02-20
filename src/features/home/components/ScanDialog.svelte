@@ -54,7 +54,7 @@
 
 <div class="overlay">
 	<div class="dialog">
-		<h3>Scan QR Code</h3>
+		<h2>Scan QR Code</h2>
 
 		<div id={readerId} class="reader"></div>
 
@@ -74,16 +74,12 @@
 	}
 
 	.dialog {
-		background: var(--card-bg);
-		border: 1px solid var(--border-color);
+		background: var(--card);
+		border: 1px solid var(--border);
 		padding: 24px;
 		border-radius: 16px;
-		width: 360px;
-		max-width: 90%;
-	}
-
-	h3 {
-		margin-top: 0;
+		max-width: 90vw;
+		width: 480px;
 	}
 
 	.reader {
