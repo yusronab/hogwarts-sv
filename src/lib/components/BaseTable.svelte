@@ -1,6 +1,7 @@
 <script lang="ts" generics="TData, TValue">
 	import { type ColumnDef, getCoreRowModel } from '@tanstack/table-core';
 	import { createSvelteTable, FlexRender } from '$lib/components/ui/data-table/index.js';
+	import { InfoIcon } from 'lucide-svelte';
 	import * as Table from '$lib/components/ui/table/index.js';
 
 	type DataTableProps<TData, TValue> = {
@@ -48,7 +49,12 @@
 				</Table.Row>
 			{:else}
 				<Table.Row>
-					<Table.Cell colspan={columns.length} class="h-24 text-center">No results.</Table.Cell>
+					<Table.Cell colspan={columns.length} class="h-24 text-center">
+						<div class="flex justify-center items-center gap-2">
+							<InfoIcon />
+							Belum ada data
+						</div>
+					</Table.Cell>
 				</Table.Row>
 			{/each}
 		</Table.Body>
